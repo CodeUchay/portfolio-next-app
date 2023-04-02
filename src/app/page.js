@@ -1,91 +1,52 @@
+import {FaBars, FaTwitter, FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa';
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const name = "<Odinamba Uche/>";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <>
+    <header className="header">  
+      <a href='#' className="logo"> Portfol<span>io</span> </a>
+      <FaBars id="menu"></FaBars>
+      <nav className="navbar">
+        <a href="#home" className="active"> Home </a>
+        <a href="#about"> About </a>
+        <a href="#services"> Services </a>
+        <a href="#portfolio"> Portfolio </a>
+        <a href="#contact"> Contact </a>
+      </nav>
+    </header>
+    <section>
+    <div className="home" id="home">
+      <div className="home-content">
+      <h3>Salut! Je Suis</h3>
+      <h1>{name}</h1>
+      <h3>And I'm a <span>Frontend Developer</span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div className="social-media"> 
+      <a href="#"><FaFacebook  className='social'/></a>
+      <a href="#"><FaInstagram className='social'/></a>
+      <a href="#"><FaTwitter className='social'/></a>
+      <a href="#"><FaLinkedin className='social'/></a>
+      </div> 
+      <a href='#' className="btn">Download CV</a>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+      <Image src="/images/photo.jpg" alt="My Image" width={500} height={500}/>
+    </div>
+    </section>
+    <section class="about" id="about">
+      <div className="about-img">
+      <Image src={"/images/photo.jpg"} alt='My about image' width={400} height={400}></Image> 
+      </div> 
+      <div className="about-content">
+        <h2 className="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href='#' className="btn">Git Me!</a>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <div className="services" id="services"></div>
+    </section>
+    </>
   )
 }

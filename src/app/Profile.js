@@ -5,8 +5,8 @@ const name = "<Odinamba Uche/>";
 
 export default function Profile() {
     return (
-    <section>
-    <div className="home" id="home">
+    <section id="home">
+    <div className="home" >
       <div className="home-content">
       <h3>Salut! Je Suis</h3>
       <h1>{name}</h1>

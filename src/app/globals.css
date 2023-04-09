@@ -144,7 +144,7 @@ span {
   letter-spacing: .1rem;
   font-size: 1.6rem;
   font-weight: 700;
-  transition: 1s ease-in-out;
+  transition: 1s ease;
 }
 
 .btn:hover {
@@ -190,7 +190,7 @@ span {
   align-items: center;
   text-align: center;
 }
-.chip {
+.chip, .services-icon {
   fill: var(--main-color);
   font-size: 4rem;
   display: inline-block;
@@ -198,22 +198,23 @@ span {
 }
 
 .skills-heading h1 {
-  font-size: 3rem; 
-  font-weight: 500;
+  font-size: 4.5rem; 
+  font-weight: 700;
   color: var(--text-color);
   margin-bottom: 1rem;
 }
 
 .skills-heading p{
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  margin: 1rem 0 2rem 0;
+  line-height: 3rem;
 }
 
 .skills-headingg {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* create 3 columns */
-  grid-template-rows: repeat(3, auto); /* create 3 rows */
-  grid-gap: 2.5rem; /* add some gap between the items */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, auto); 
+  grid-gap: 2.5rem;
 }
 
 .skills-first {
@@ -223,12 +224,64 @@ span {
   padding: 1rem;
   align-items: center;
   font-size: 1.5rem;
+  transition: .5s ease;
 }
-
+.skills-first:hover {
+  background-color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.skills-first:hover span {
+  color: var(--text-color);
+}
 .badge {
   fill: var(--icon-color);
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
   margin-right: .5rem;
+}
+
+.services h2 {
+  margin-bottom: 5rem;
+}
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+}
+
+.services-container .services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+.services-box h3 {
+  font-size: 2.6rem;
+}
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+.construction-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.my-image {
+  max-width: 100%;
+  max-height: 80%;
+  margin-bottom: 2rem;
 }

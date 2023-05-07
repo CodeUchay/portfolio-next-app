@@ -5,7 +5,7 @@ import {MdDesignServices} from 'react-icons/md';
 
 export default function Services() {
     return (
-    <section className='services' id="services">
+    <section className='services' id='services'>
         <h2 className="heading">Our <span>Services</span></h2>
         <div className="services-container">
 

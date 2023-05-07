@@ -1,34 +1,28 @@
-import Image from "next/image";
-import Link from "next/link";
+import { projects } from "../utils/portfolio.js";
+import { getImageUrl } from "../utils/images.js";
+import Link from "next/link.js";
+import Image from "next/image.js";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Portfolio() {
-  return (
-    <>
-      <section className="portfolio" id="portfolio">
-        <h2 className="heading">
-          {" "}
-          Latest <span className="">Project</span>
-        </h2>
-        <div className="portfolio-container">
-          <div className="portfolio-box">
-            <Image src="/images/portfolio1.png"
-              alt="My about image"
-              width={400}
-              height={400}/> 
-            <div className="portfolio-layer">
-              <h4 className="">Web Design </h4>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
-                explicabo.
-              </p>
-              <Link href="#">
-                <FaExternalLinkAlt />
-              </Link>
-            </div>
-          </div>
+  const listProjects = projects.map((projects) => (
+      <li className="portfolio-box"  key={projects.id}>
+       <Image className="img" src={getImageUrl(projects)} alt={projects.name} width={400} height={250} />
+      <div className="portfolio-layer">
+        <h4 className="">{projects.name} </h4>
+        <p >{projects.content}</p>
+        <a className="img-link" href="#">
+          <FaExternalLinkAlt  className="img-icon"/>
+        </a>
         </div>
-      </section>
-    </>
+      </li>
+  ));
+  return (
+  <section className="portfolio" id="portfolio">
+    <h2 className="heading"> Latest <span>Project </span></h2>
+    <ul className="portfolio-container">
+      {listProjects}
+    </ul>
+  </section>
   );
 }

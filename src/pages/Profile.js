@@ -20,7 +20,9 @@ export default function Profile() {
       </div> 
       <a href='#' className="btn">Download CV</a>
       </div>
+      <div>
       <Image src="/images/photo.jpg" alt="My Image" width={500} height={500}/>
+      </div>
     </div>
     </section>
     );

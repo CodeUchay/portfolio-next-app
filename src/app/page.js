@@ -1,3 +1,4 @@
+'use client'
 import Header from "../pages/Header";
 import Profile from "../pages/Profile";
 import About from "../pages/About";
@@ -16,7 +17,6 @@ export default function Home() {
     <About/>
     <Skills/>
     <Services/>
-    <UnderConstruc/>
     <Projects/>
     <Contact/>
     <Footer/> 
